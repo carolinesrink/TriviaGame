@@ -9,7 +9,7 @@ $(document).ready(function () {
    
    });
 
-$(document).on("click", ".answerButton", function(event) {
+$(document).on("click", ".answerButtons", function(event) {
     triviaGame.answerClicks(event);
 })
 
@@ -150,15 +150,42 @@ fillQuestions: function() {
     }
 },
 
-// Register answer clicks function
+// Register right answer clicks function
 answerClicks: function() {
+    clearInterval(timer);
+    if ($(event.target).data("name") == questions[triviaGame.currentQuestion].correct) {
+        triviaGame.rightGuess();
+    } else {
+        triviaGame.wrongGuess();
+    }
+},
 
-}
+// Right guess function
+rightGuess: function() {
+    console.log("nailed it");
+    clearInterval(timer);
+    triviaGame.numberRight++;
+    $("#questionContent").html(gameMessages.correct);
+    if (triviaGame.currentQuestion == questions.length - 1) {
+        setTimeout(triviaGame.results, 3000);
+    }
+},
+
+// Wrong guess function
+wrongGuess: function() {
+    console.log("did not nail it");
+    clearInterval(timer);
+    triviaGame.numberWrong++;
+    $("#questionContent").html(gameMessages.incorrect);
+},
+
 // Next question function
 
 // Timer function
 
 // Time up function
+
+// Results function
 
 // Reset function
 }
