@@ -19,9 +19,9 @@ $(document).on("click", "#reset", function() {
 
 // Messages after each question
 var gameMessages = {
-    correct: "You know a little something, Jon Snow! Correct!",
-    incorrect: "You know nothing. Wrong!",
-    timeUp: "Out of time! You've made Arya's list."
+    correct: "<h3>You know a little something, Jon Snow! Correct!</h3>",
+    incorrect: "<h3>You know nothing. Wrong!</h3>",
+    timeUp: "<h3>Out of time! You've made Arya's list.</h3>"
 };
 
 // Creating my array of questions and answers.
@@ -216,8 +216,8 @@ timesUp: function() {
 results: function() {
     clearInterval(timer);
     $("#questionContent").html("<h2>You made it to the end!</h2>");
-    $("#questionContent").append("<h3>Answered right: " + triviaGame.numberRight + "</h3>");
-    $("#questionContent").append("Answered wrong: " + triviaGame.numberWrong + "</h3>");
+    $("#questionContent").append("<h3>Right: " + triviaGame.numberRight + "</h3>");
+    $("#questionContent").append("<h3>Wrong: " + triviaGame.numberWrong + "</h3>");
     $("#questionContent").append("<h3>Unanswered: " + triviaGame.unanswered + "</h3>");
     $("#questionContent").append("<button id='reset'>Reset Game</button>");
 },
