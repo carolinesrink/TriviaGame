@@ -57,8 +57,8 @@ answers: ["Margaery Tyrell and Lancel Lannister", "The High Sparrow and Ramsay B
 correct: "Margaery Tyrell and Lancel Lannister",
 },
 { // 7
-question: "7.  Aside from being Master of Coin and answers member of the King's Small Council, the character of Peter 'Littlefinger' Baelish from King's Landing also runs what kind of business?",
-answers: ["Tailor Shop", "Apothecary", "Blacksmith Shop", "Brothel"], 
+question: "7.  Aside from being Master of Coin and answers member of the King's Small Council, the character of Peter 'Littlefinger' Baelish from King's Landing also runs a ___________?",
+answers: ["Combat Arena", "Apothecary", "Blacksmith Shop", "Brothel"], 
 correct: "Brothel",
 }, 
 { // 8
@@ -73,12 +73,12 @@ correct: "Needle",
 }, 
 { // 10
 question: "10.  Which of the following direwolves died in season 1?",
-answers: ["Shaggydog", "Nymeria", "Summer", "Lady"], 
+answers: ["Lady", "Nymeria", "Summer", "Shaggydog"], 
 correct: "Lady",
 }, 
 { // 11
 question: "11.  By what name do the Seven Kingdoms refer to the Free Folk who live in north beyond the Wall?",
-answers: ["Wildlings", "Northerners", "Canadians", "Nomads"], 
+answers: ["Nomads", "Canadians", "Wildlings", "Northerners"], 
 correct: "Wildlings",
 }, 
 { // 12
@@ -108,7 +108,7 @@ correct: "Aerys II, Robert Baratheon and Joffrey Baratheon",
 }, 
 { // 17
 question: "17.  In which battle did Jon Snow and Sansa Stark retake Winterfell from Lord Ramsay Bolton?",
-answers: ["The Battle of the Bastards", "The Battle of the Blackwater", "The Battle of Castle Rock", "Red Wedding"],
+answers: ["The Battle of the Bastards", "The Battle of the Blackwater", "The Battle of Castle Rock", "The Red Wedding"],
 correct: "The Battle of the Bastards",
 },
 { // 18
@@ -123,7 +123,7 @@ correct: "Dragonglass",
 },
 { // 20
 question: "20.  What is the nickname of Sandor Clegane?",
-answers: ["The Mountain", "The Hound", "The Wolf", "The Wall"], 
+answers: ["The Mountain", "The Hound", "The Wolf", "The Lion"], 
 correct: "The Hound",
 }];
 
@@ -215,7 +215,7 @@ timesUp: function() {
 // Results function
 results: function() {
     clearInterval(timer);
-    $("#questionContent").html("<h2>You made it to the end!</h2>");
+    $("#questionContent").html("<h2>You've won the Iron Throne!</h2>");
     $("#questionContent").append("<h3>Right: " + triviaGame.numberRight + "</h3>");
     $("#questionContent").append("<h3>Wrong: " + triviaGame.numberWrong + "</h3>");
     $("#questionContent").append("<h3>Unanswered: " + triviaGame.unanswered + "</h3>");
