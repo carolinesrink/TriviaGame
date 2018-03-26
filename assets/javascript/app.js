@@ -83,7 +83,7 @@ correct: "Wildlings",
 }, 
 { // 12
 question: "12.  Who was Hand of the King before Eddard Stark?",
-answers: ["Tyrion Lannister", "Eddard Stark", "Jon Arryn", "Tywin Lannister"], 
+answers: ["Tyrion Lannister", "Jorah Mormont", "Jon Arryn", "Tywin Lannister"], 
 correct: "Jon Arryn",
 }, 
 { // 13
